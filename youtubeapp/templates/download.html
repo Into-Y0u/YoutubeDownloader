@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>YouTube Downloader</title>
+    <style>
+      body{
+        background-color:rgb(195 255 252);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav bar starts -->
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">YouTube Downloader</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://whos-arghya.w3spaces.com/">PortFolio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contact me ?
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://www.instagram.com/arghya_tlf/">Instagram</a>
+              <a class="dropdown-item" href="https://www.linkedin.com/in/arghyadev-sarkar/">LinkedIn</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://cranky-curie-678c36.netlify.app/">My Movie Website</a>
+              
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- navbar ends  -->
+    <div  class="bg_img"></div>
+
+    <!-- main body starts -->
+    <div class="container">
+        <h1 class="mt-5">
+
+            Video Title : {{title}}
+        </h1>
+        <div class=" my-5 embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src={{embed}} allowfullscreen></iframe>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Size</th>
+                <th scope="col">Quality</th>
+                <th scope="col">Fps</th>
+                <th scope="col">Type</th>
+                <th scope="col">Download</th>
+              </tr>
+            </thead>
+            <div style="font-weight : 600 ; padding : 10px ;"  >
+              Video Section
+            </div>
+              {% for j in video %}
+            <tbody>
+              <tr>
+                <th>{{j.filesize}} bytes</th>
+                <td>{{j.resolution}}</td>
+                <td>{{j.fps}}</td>
+                <td>{{j.type}}</td>
+                <td><a href="{{j.url}}" style="color: blue;" >Downlaod</a></td>
+                
+
+
+              </tr>
+            </tbody>
+              {% endfor %}
+        </table>
+            
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Size</th>
+              <th scope="col">Quality</th>
+              <th scope="col">Type</th>
+              <th scope="col">Download</th>
+            </tr>
+          </thead>
+          <div style="font-weight : 600 ; padding : 10px ;"   >
+            Audio Section : You have to rename the file and extension to .mp3
+          </div>
+          {% for j in audio %}
+          <tbody>
+            <tr>
+              <th>{{j.filesize}} bytes</th>
+              <td>{{j.abr}}</td>
+              <td>{{j.type}}</td>
+              <td><a href="{{j.url}}" style="color: blue;">Downlaod</a></td>
+            </tr>
+          </tbody>
+            {% endfor %}
+        </table>  
+
+              
+
+           
+    </div>
+
+    <script>
+      function clicked(){
+        alert("Your Video has been Downloading.. Wait Until next page arrives");
+      }
+    </script>
+
+    <!-- main body ends  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <center>
+      <p>© Designed by <strong>Arghya</strong> <script>document.write(new Date().getFullYear())</script>    
+      <span>• </span> 
+
+    </center>
+
+  </body>
+</html>
