@@ -18,5 +18,5 @@ Django , Python and pytube3
 
 Mixture Variants:
 
-
+https://user-images.githubusercontent.com/68708178/161249607-54447697-b031-413e-8cef-6d6e710038a6.mp4
 
