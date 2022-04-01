@@ -16,7 +16,7 @@ Django , Python and pytube3
 
 # Video rep 
 
-Mixture Variants:
+Video reps:
 
 https://user-images.githubusercontent.com/68708178/161249607-54447697-b031-413e-8cef-6d6e710038a6.mp4
 
